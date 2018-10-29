@@ -1,6 +1,7 @@
 <template>
     <div id="home">
-        hello, home!
+        <div class="header">hello, home!</div>
+        
     </div>
 </template>
 
@@ -11,7 +12,11 @@
 <style lang="scss">
  #home {
      width: 100%;
-     height: 300px;
+     height: 100%;
      background: red;
+     .header {
+         width: 100%;
+         height: 100px;
+     }
  }
 </style>

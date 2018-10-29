@@ -10,9 +10,8 @@ module.exports = {
     extract: isProduction
   }),
   postcss: [
-    require('autoprefixer')({
-      browsers: ['last 7 versions']
-    })
+    require('autoprefixer')({browsers: ['iOS >= 7', 'Android >= 4.1']}),
+    require('postcss-px2rem')({remUnit: 75, 'baseDpr':2})
   ],
   transformToRequire: {
     video: 'src',
