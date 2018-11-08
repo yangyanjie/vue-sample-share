@@ -8,6 +8,7 @@
 </template>
 
 <script>
+    import Lib from '@/assets/js/Lib'
     import {
         mapGetters
     } from 'vuex';
@@ -19,8 +20,24 @@
                 loading: 'loading',
             })
         },
+        mounted() {
+            Lib.ajaxPost({
+                url: '/diamondConfig/getDiamondConfigListByPage',
+                params: {
+                    pageSize: 10,
+                    pageNum: 0
+                    
+                },
+                success: (res) => {
+                    console.log(res);
+                },
+                error: (err) => {
+                    
+                }
+            })
+        },
         methods: {
-
+            
         },
         
     };

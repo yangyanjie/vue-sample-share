@@ -41,7 +41,6 @@ compiler.plugin('compilation', function (compilation) {
 
 // proxy api requests
 proxyTable.forEach(function (context) {
-  //console.log(context);
   app.use(proxyMiddleware(context.routepath, {
     target: context.proxyTarget,
     changeOrigin: true

@@ -1,6 +1,6 @@
 require('./check-versions')()
 
-process.env.NODE_ENV = 'production'
+//process.env.NODE_ENV = 'production'
 
 var ora = require('ora')
 var rm = require('rimraf')
@@ -9,8 +9,9 @@ var chalk = require('chalk')
 var webpack = require('webpack')
 var config = require('../config')
 var webpackConfig = require('./webpack.prod.conf')
-
-var spinner = ora('building for production...')
+console.log(process.env.NODE_ENV+ '1111111');
+console.log(process.env.env_config+ '1111111');
+var spinner = ora('building for ' + process.env.NODE_ENV + 'of' + process.env.env_config + 'mode...')
 spinner.start()
 
 rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), err => {
