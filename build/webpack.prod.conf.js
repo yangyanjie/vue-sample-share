@@ -9,7 +9,6 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 var env = config.build[process.env.env_config+'Env']
-console.log(env);
 var webpackConfig = merge(baseWebpackConfig, {
     module: {
         rules: utils.styleLoaders({

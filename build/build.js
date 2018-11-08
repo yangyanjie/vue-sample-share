@@ -9,8 +9,6 @@ var chalk = require('chalk')
 var webpack = require('webpack')
 var config = require('../config')
 var webpackConfig = require('./webpack.prod.conf')
-console.log(process.env.NODE_ENV+ '1111111');
-console.log(process.env.env_config+ '1111111');
 var spinner = ora('building for ' + process.env.NODE_ENV + 'of' + process.env.env_config + 'mode...')
 spinner.start()
 
