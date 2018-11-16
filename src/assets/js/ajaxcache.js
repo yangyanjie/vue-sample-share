@@ -5,9 +5,11 @@
  */
 
 let AJAXCACHE = [];
-
+console.log(AJAXCACHE);
 export default {
     add: (val) => {
+        // !~AJAXCHCHE.indexOf(val) 不存在；
+        console.log(AJAXCACHE);
         if (!!~AJAXCACHE.indexOf(val)) return 1;
         AJAXCACHE.push(val);
         return 0;
